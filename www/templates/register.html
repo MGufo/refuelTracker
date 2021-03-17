@@ -1,0 +1,50 @@
+<div id="register">
+    <h1>Crea un <span xml:lang="en" lang="en">Account</span></h1>
+    <p id="userRegistrationTips" class="topMargin" aria-hidden="true">(*) i campi contrassegnati con l’asterisco non
+        possono essere vuoti</p>
+    <form class="topMargin" action="" method="post" onsubmit="return validateRegister()">
+        <fieldset>
+            <legend>Dati di accesso</legend>
+            <label for="registerEmail">
+                <span xml:lang="en" lang="en">Email</span><span class="required" aria-hidden="true">*</span>:
+            </label>
+            <input id="registerEmail" type="text" name="email" aria-required="true" class="campo_input"
+                maxlength="40" />
+            <span class="error toBlock " id="errorRegisterEmail">%VALIDATION_EMAIL_ERROR%</span>
+            <label for="registerPassword">
+                <span xml:lang="en" lang="en">Password</span><span class="required" aria-hidden="true">*</span>:
+            </label>
+            <input id="registerPassword" type="password" aria-required="true" name="password" class="campo_input"
+                maxlength="40" />
+            <span class="error toBlock " id="errorRegisterPassword">%VALIDATION_PASSWORD_ERROR%</span>
+            <label for="registerConfirmPassword">
+                Conferma <span xml:lang="en" lang="en">password</span><span class="required"
+                    aria-hidden="true">*</span>:
+            </label>
+            <input id="registerConfirmPassword" type="password" aria-required="true" name="confirmPassword"
+                class="campo_input" maxlength="40" />
+            <span class="error toBlock " id="errorRegisterConfirmPassword">%VALIDATION_CONFIRM_PASSWORD_ERROR%</span>
+
+        </fieldset>
+        <fieldset>
+            <legend>Dati personali</legend>
+            <label for="registerNomeCognome">
+                Nome e cognome<span class="required" aria-hidden="true">*</span>:
+            </label>
+            <input id="registerNomeCognome" type="text" name="nome_cognome" aria-required="true" class="campo_input"
+                maxlength="40" />
+            <span class="error toBlock " id="errorRegisterNomeCognome">%VALIDATION_NAME_SURNAME_ERROR%</span>
+            <label for="registerTelefono">
+                Telefono:
+            </label>
+            <input id="registerTelefono" type="text" name="telefono" class="campo_input" maxlength="10" />
+            <span class="error toBlock " id="errorRegisterTelefono">%VALIDATION_PHONE_ERROR%</span>
+        </fieldset>
+        <fieldset>
+            <legend>Conferma registrazione</legend>
+            <input type="submit" class="styledButton" value="Registrati" />
+        </fieldset>
+    </form>
+    <p>Hai gi&agrave; un <span xml:lang="en" lang="en">account</span>?</p>
+    <a href="login.php" id="register_account_esistente">Accedi</a>
+</div>

@@ -1,0 +1,17 @@
+<div id="loginWrapper">
+    <h1 id="loginTitle">Accedi</h1>
+    <form id="login" action="" method="post" onsubmit="return validateLogin();">
+        <fieldset>
+            <legend xml:lang="en" lang="en">Login</legend>
+            <label for="loginEmail"><span xml:lang="en" lang="en">Email:</span></label>
+            <input id="loginEmail" name="email" class="campo_input" maxlength="40" />
+            <label for="loginPassword"><span xml:lang="en" lang="en">Password:</span></label>
+            <input id="loginPassword" type="password" name="password" class="campo_input" maxlength="40" />
+            <input type="submit" class="styledButton" value="Accedi" title="Accedi al sito" />
+            <input type="hidden" name="continue" value="%CONTINUE%" />
+            <span id="errorLogin" class="error toBlock topMargin">%LOGIN_ERROR%</span>
+        </fieldset>
+    </form>
+    <p>Sei un nuovo utente di <span xml:lang="en" lang="en">refuelTracker</span>?</p>
+    <a href="register.php%REGISTER_CONTINUE%">Registrati</a>
+</div>
