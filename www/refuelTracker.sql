@@ -30,13 +30,14 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `refuels`;
 CREATE TABLE IF NOT EXISTS `refuels` (
-  `ID_refuel` int(11) UNSIGNED NOT NULL,
+  `ID_refuel` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Type` char(2) NOT NULL,
   `ID_user` int(11) UNSIGNED NOT NULL,
   `Date` date NOT NULL,
   `Cost` decimal(10,0) DEFAULT NULL,
   `Cost/L` decimal(10,0) DEFAULT NULL,
   `Liters` decimal(10,0) DEFAULT NULL,
-  `Total Kms` int(7) UNSIGNED DEFAULT NULL,
+  `Kms` int(7) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`ID_refuel`),
   KEY `FK(userID)` (`ID_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
